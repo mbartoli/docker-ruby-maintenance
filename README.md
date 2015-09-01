@@ -1,5 +1,5 @@
 # docker-ruby-maintenance
-Docker container for site maintenance
+Docker container for jekyll site maintenance
 
 ## Use
 ####To pull:

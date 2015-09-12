@@ -12,7 +12,8 @@ RUN apt-get -y install \
 	libyaml-dev \
 	git \
 	nodejs \
-	python
+	python \
+	vim
 
 ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz /tmp/
 
@@ -29,3 +30,7 @@ RUN cd /tmp && \
 RUN gem install redcarpet
 RUN gem install jekyll
 RUN gem install execjs
+
+WORKDIR /home
+RUN git clone https://github.com/mbartoli/mbartoli.github.io
+WORKDIR /home/mbartoli.github.io
